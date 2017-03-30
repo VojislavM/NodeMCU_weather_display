@@ -17,7 +17,6 @@ Also, I will make a new 3D printable case and publicize the STL file on this rep
 * I had the problem with wunderground API to find appropriate City Name and Country "code". My city is "Novi Sad", and it has one white space and two words. If you have the similar city name, with white spaces, use underscore instead of whitespace: "Novi_Sad". Also in the [wunderground international city code list was code](https://www.wunderground.com/about/faq/international_cities.asp) for my country, "Serbia". The code in the list was "YG", but the correct code was "RS", so watch out for that when changing.     
 
 ### TODO:
-* lose the indor weather page on dispaly - in firmware
 * make new case
 ---
 

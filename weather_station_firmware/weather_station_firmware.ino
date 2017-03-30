@@ -51,8 +51,8 @@ void drawHeaderOverlay(OLEDDisplay *display, OLEDDisplayUiState* state);
 void setReadyForWeatherUpdate();
 
 /* frames */
-FrameCallback frames[] = {drawDateTime, drawDHT, drawCurrentWeather, drawForecast};
-int numberOfFrames = 4;
+FrameCallback frames[] = {drawDateTime, /*drawDHT, */drawCurrentWeather, drawForecast};
+int numberOfFrames = 3;
 
 OverlayCallback overlays[] = { drawHeaderOverlay };
 int numberOfOverlays = 1;
@@ -263,8 +263,8 @@ void drawHeaderOverlay(OLEDDisplay *display, OLEDDisplayUiState* state)
   display->setFont(ArialMT_Plain_10);
 
   display->setTextAlignment(TEXT_ALIGN_LEFT);
-  String tempIn = "In: "+ String("N/A");// + "°C";
-  //String tempIn = "In: "+ String(localTemp) + "°C";
+  // Show maximum temperature for today
+  String tempIn = "Max: "+ wunderground.getForecastHighTemp(0) + "°C";
   display->drawString(0, 54, tempIn);
 
   display->setColor(WHITE);
