@@ -5,6 +5,8 @@ This is a small project to display outside weather conditions. It uses NodeMCU a
 
 Also, I will make a new 3D printable case and publicize the STL file on this repository.
 
+![alt tag](https://github.com/VojislavM/NodeMCU_weather_display/blob/master/Pics/schematics.png)
+
 ### Hardware components:
 * 1x [NodeMCU](http://nodemcu.com/index_en.html)
 * 1x [Adafriud OLED SSD 1306 or compatible](https://www.adafruit.com/product/326)
