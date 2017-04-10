@@ -3,7 +3,7 @@ Small WiFi weather display based on NodeMCU
 
 This is a small project to display outside weather conditions. It uses NodeMCU as the main MCU with WiFi and small SSD1306 display. This project is based on [@Mjrovai](https://github.com/Mjrovai) project published as [tutorial on hakster.io](https://www.hackster.io/mjrobot/iot-made-simple-home-weather-station-with-nodemcu-and-oled-27d3a9?ref=explore&ref_id=trending___&offset=3). Difference is that I did not need indoor temperature reading, so the display will only show forecast from the [wunderground](https://www.wunderground.com/) website You can find original firmware on this [repo](https://github.com/Mjrovai/MJRoBot-Home-Weather-Station).
 
-Also, I will make a new 3D printable case and publicize the STL file on this repository.
+There is a new 3D printable case (STL file) on this repository, folder **case_3D**.
 
 ![alt tag](https://github.com/VojislavM/NodeMCU_weather_display/blob/master/Pics/schematics.png)
 
@@ -12,14 +12,14 @@ Also, I will make a new 3D printable case and publicize the STL file on this rep
 * 1x [Adafriud OLED SSD 1306 or compatible](https://www.adafruit.com/product/326)
 * 1x USB Power supply
 
-### Firmware:
+### Firmware (Setup):
 * [Arduino IDE](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon)
 
 ### Note:
 * I had the problem with wunderground API to find appropriate City Name and Country "code". My city is "Novi Sad", and it has one white space and two words. If you have the similar city name, with white spaces, use underscore instead of whitespace: "Novi_Sad". Also in the [wunderground international city code list was code](https://www.wunderground.com/about/faq/international_cities.asp) for my country, "Serbia". The code in the list was "YG", but the correct code was "RS", so watch out for that when changing.     
 
 ### TODO:
-* make new case
+* make new case for nodeMCU
 ---
 
 #### License
