@@ -1,4 +1,4 @@
-# NodeMCU_weather_display
+# NodeMCU_weather_display [![Build Status](https://travis-ci.org/VojislavM/NodeMCU_weather_display.svg?branch=master)](https://travis-ci.org/VojislavM/NodeMCU_weather_display)
 Small WiFi weather display based on NodeMCU
 
 This is a small project to display outside weather conditions. It uses NodeMCU as the main MCU with WiFi and small SSD1306 display. This project is based on [@Mjrovai](https://github.com/Mjrovai) project published as [tutorial on hakster.io](https://www.hackster.io/mjrobot/iot-made-simple-home-weather-station-with-nodemcu-and-oled-27d3a9?ref=explore&ref_id=trending___&offset=3). Difference is that I did not need indoor temperature reading, so the display will only show forecast from the [wunderground](https://www.wunderground.com/) website You can find original firmware on this [repo](https://github.com/Mjrovai/MJRoBot-Home-Weather-Station).
