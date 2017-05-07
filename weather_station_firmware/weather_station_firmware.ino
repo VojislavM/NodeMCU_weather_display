@@ -22,8 +22,8 @@ Ticker ticker;
 WundergroundClient wunderground(IS_METRIC); 
 
 /* DHT22 */
-#include "DHT.h"
-DHT dht(DHTPIN, DHTTYPE);
+//#include "DHT.h"
+//DHT dht(DHTPIN, DHTTYPE);
 
 /* OLED */
 #include "SSD1306Wire.h"
@@ -82,7 +82,7 @@ void setup()
     Serial.print(".");
     display.clear();
     display.flipScreenVertically();
-    display.drawString(64, 10, "Conectando al WiFi");
+    display.drawString(64, 10, "Connecting to WiFi");
     display.drawXbm(46, 30, 8, 8, counter % 3 == 0 ? activeSymbole : inactiveSymbole);
     display.drawXbm(60, 30, 8, 8, counter % 3 == 1 ? activeSymbole : inactiveSymbole);
     display.drawXbm(74, 30, 8, 8, counter % 3 == 2 ? activeSymbole : inactiveSymbole);

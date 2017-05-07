@@ -1,6 +1,6 @@
 /* WIFI */
-const char* WIFI_SSID = "Tenda";
-const char* WIFI_PWD = "video-teka-021";
+const char* WIFI_SSID = "offone";
+const char* WIFI_PWD = "0ff0neph0ne";
 
 /* Wunderground Settings */
 const boolean IS_METRIC = true;
