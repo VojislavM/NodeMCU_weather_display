@@ -11,6 +11,9 @@ install:
   - ln -s $PWD /usr/local/share/arduino/libraries/NodeMCU_weather_display
 # boards manager not working on 1.6.7 - 1.6.8
   - arduino --pref "boardsmanager.additional.urls=http://arduino.esp8266.com/stable/package_esp8266com_index.json" --save-prefs
+  - arduino --install-boards esp8266:esp8266
+  - arduino --board esp8266:esp8266:generic --save-prefs
+  - arduino --pref "compiler.warning_level=all" --save-prefs
 # install lib
   - git clone https://github.com/adafruit/Adafruit_Sensor /usr/local/share/arduino/libraries/Adafruit_Sensor
   - git clone https://github.com/adafruit/DHT-sensor-library /usr/local/share/arduino/libraries/DHT-sensor-library
@@ -18,16 +21,10 @@ install:
   - git clone https://github.com/squix78/esp8266-weather-station /usr/local/share/arduino/libraries/esp8266-weather-station
   - git clone https://github.com/squix78/json-streaming-parser /usr/local/share/arduino/libraries/json-streaming-parser
 
-  - arduino --install-boards esp8266:esp8266
-  - arduino --board esp8266:esp8266:generic --save-prefs
-  - arduino --pref "compiler.warning_level=all" --save-prefs
 script:
   - "echo $PWD"
   - "echo $HOME"
-  - "ls $PWD"
-
-  - arduino -v --verbose-build --verify $PWD/weather_station_firmware/weather_station_firmware.ino
-  - arduino --verify --board arduino:avr:uno $PWD/weather_station_firmware/weather_station_firmware.ino
+  - arduino --verify --board $BD $PWD/weather_station_firmware/weather_station_firmware.ino
 
 notifications:
   email:
